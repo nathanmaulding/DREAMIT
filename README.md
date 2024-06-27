@@ -3,6 +3,8 @@ Here we present DREAMIT (Dynamic Regulation of Expression Across Modules in Infe
 
 Using the transformed smoothed data, it calculates the association between a TF and all of its predicted targets according to the TRRUST database assessed using multiple metrics (e.g., Pearson correlation, Mutual Information, Dynamic Time Warping distance, etc). Finally, DREAMIT uses a Relational Set Enrichment Analysis (RSEA) test to evaluate the significance of the TF-to-target associations and identify a core set of targets compared to a background model, which consists of arbitrarily selected targets.
 
+![Example Image](https://github.com/nathanmaulding/DREAMIT/blob/main/images/Figure1.png)
+
 # Tutorial
 For toy example of running DREAMIT follow these steps:
 
