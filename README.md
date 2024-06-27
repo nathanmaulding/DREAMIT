@@ -16,7 +16,7 @@ The toy example json file contains a trajectory inferred by PAGA for a hematopoe
 ```bash
 pip3 install numpy scipy matplotlib scikit-learn dtw-python statsmodels
 ```
-4. Run DREAMIT
+4. Run DREAMIT (change the thread count based on your machine)
 ```bash
 python3 DREAMIT.py -json_dictionary Data/paul_toy_data.json -tf_dict Data/trrust_rawdata.mouse.tsv -threads 20 -outdir test_toy_run
 ```
