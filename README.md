@@ -35,6 +35,7 @@ pip3 install numpy scipy matplotlib scikit-learn dtw-python statsmodels
 ```bash
 python3 DREAMIT.py -json_dictionary Data/paul_toy_data.json -tf_dict Data/trrust_rawdata.mouse.tsv -threads 20 -outdir test_toy_run
 ```
+Note: Runtime is expected to be around 1 hour when using ~20 threads. Output may have minor variance due to spline fit, subsampling, and other factors.
 
 # Parameters
 
@@ -44,7 +45,7 @@ python3 DREAMIT.py --help
 options:
   -h, --help            show this help message and exit
   -json_dictionary JSON_DICTIONARY
-                        input a JSON file with branching information (created by NM_slingshot_v2.R)
+                        input a JSON file with branching information
   -tf_dict TF_DICT      input must be a factor to all targets file with scores (could be edited)
   -threads THREADS      input the number of threads to use. Default = 1
   -number_of_bins NUMBER_OF_BINS
