@@ -22,7 +22,7 @@ class CommandLine():
             usage='%(prog)s [options] -option1[default] <input >output'
         )
         self.parser.add_argument('-json_dictionary',
-                                 help="input a JSON file with branching information (created by NM_slingshot_v2.R)")
+                                 help="input a JSON file with branching information")
         self.parser.add_argument('-tf_dict',
                                  help="input must be a factor to all targets file with scores (could be edited)")
         self.parser.add_argument('-threads', type=int, default=1,
