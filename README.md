@@ -61,10 +61,11 @@ options:
 ```
 
 # More info
-For toy example of running DREAMIT download Data/paul_toy_data.json.gz and Data/trrust_rawdata.mouse.tsv (which can also be found here https://www.grnpedia.org/trrust/)
+TF-target data can be found here https://www.grnpedia.org/trrust/ or used directly from the Data/ folder.
 
-The inferred trajectory solution is contained in the JSON file. Once the user has a trajectory inferred to their liking they should format the data into a JSON file similar to that found in this toy example where each branch is its own key. The toy example contains a trajectory inferred by PAGA for a hematopoetic lineage.
-From the terminal, unzip the toy data file with:
+The inferred trajectory solution should be provided through a JSON file.Once the user has a trajectory inferred to their liking they should format the data into a JSON file similar to that found in this toy example within the Data/ folder where each branch is its own key. The JSON file should be formatted to look like this example:
+
+
 
 gunzip path/to/paul_toy_data.json.gz
 
