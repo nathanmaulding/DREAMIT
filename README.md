@@ -1,14 +1,27 @@
-Follow these steps for an example run:
+For toy example of running DREAMIT follow these steps:
 
 1. clone the repository
 ```bash
 git clone https://github.com/nathanmaulding/DREAMIT.git
+cd DREAMIT
 ```
 
-2. unzip the data
+2. Unzip the data
 ```bash
-gunzip DREAMIT/Data/paul_toy_data.json.gz
+gunzip Data/paul_toy_data.json.gz
 ```
+The toy example json file contains a trajectory inferred by PAGA for a hematopoetic lineage.
+
+3. Make sure you have python3 and pip3 installed (https://www.python.org/downloads/). Download dependencies
+```bash
+pip3 install numpy scipy matplotlib scikit-learn dtw-python statsmodels
+```
+4. Run DREAMIT
+```bash
+python3 DREAMIT.py -json_dictionary Data/paul_toy_data.json -tf_dict Data/trrust_rawdata.mouse.tsv -threads 20 -outdir test_toy_run
+```
+
+
 
 
 For toy example of running DREAMIT download Data/paul_toy_data.json.gz and Data/trrust_rawdata.mouse.tsv (which can also be found here https://www.grnpedia.org/trrust/)
