@@ -61,18 +61,17 @@ options:
 ```
 
 # More info
-TF-target data can be found here https://www.grnpedia.org/trrust/ or used directly from the Data/ folder.
+TF-target data can be found here https://www.grnpedia.org/trrust/ or used directly from the Data/ folder. The format of any TF-target data should be a tsv file with the Transcription Factor listed first, its target second, the relationship third, and the weight fourth. For example:
 
-The inferred trajectory solution should be provided through a JSON file.Once the user has a trajectory inferred to their liking they should format the data into a JSON file similar to that found in this toy example within the Data/ folder where each branch is its own key. The JSON file should be formatted to look like this example:
+```bash
+AATF    BAX     Repression      22909821
+AATF    CDKN1A  Unknown 17157788
+AATF    KLK3    Unknown 23146908
+AATF    MYC     Activation      20549547
+```
 
+The inferred trajectory solution should be provided through a JSON file.Once the user has a trajectory inferred to their liking they should format the data into a JSON file similar to that found in this toy example within the Data/ folder where each branch is its own key. The JSON file should be formatted to look like this example where the cell attributes can contain additional information, but must contain the "cell_id", "pseudotime", and the genes to be included in the analysis:
 
-
-gunzip path/to/paul_toy_data.json.gz
-
-Also download the DREAMIT.py file along with its dependencies.
-
-Run DREAMIT on the toy example with the following command with the appropriate paths to the script, data, and desired output folder location and name:
-
-python3 DREAMIT.py -json_dictionary path/to/paul_toy_data.json -tf_dict path/to/trrust_rawdata.mouse.tsv -threads 20 -outdir path/to/testtoy
-
-Note: Runtime is expected to be around 1 hour when using ~20 threads. Output may have minor variance due to spline fit, subsampling, and other factors.
+```bash
+{"branches":{"Branch_1":{"cell_attribute1": [a,b,c,...,n], "cell_attribute2": [a,b,c,...,n], "cell_attributen": [a,b,c,...,n]}, "Branch_n":{"cell_attribute1": [a,b,c,...,n], "cell_attribute2": [a,b,c,...,n], "cell_attributen": [a,b,c,...,n]}}}
+```
