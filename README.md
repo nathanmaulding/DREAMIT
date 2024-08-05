@@ -1,5 +1,5 @@
 # DREAMIT
-https://zenodo.org/badge/DOI/10.5281/zenodo.13175583.svg
+https://doi.org/10.5281/zenodo.13175583
 
 Here we present DREAMIT (Dynamic Regulation of Expression Across Modules in Inferred Trajectories). DREAMIT aims to analyze dynamic regulatory patterns along trajectory branches, implicating transcription factors (TFs) involved in cell state transitions within scRNAseq datasets. DREAMIT uses pseudotime ordering within a robust subrange of a trajectory branch to group individual cells into bins. It aggregates the cell-based expression data into a set of robust pseudobulk measurements containing gene expression averaged within bins of neighboring cells. It then smooths trends after searching for an optimal fitting spline across the bins. DREAMIT rejects further analyzing branches that produce highly variable smoothing estimates (covariation in spline fitting parameters found to be greater than 1.0 across 80% subsampling) as these branches may represent sparse or noisy parts of the data that could produce unreliable TF inferences. 
 
