@@ -31,7 +31,7 @@ The toy example json file contains a trajectory inferred by PAGA for a hematopoe
 
 3. Make sure you have python3 and pip3 installed (https://www.python.org/downloads/). Download dependencies
 ```bash
-pip3 install numpy scipy matplotlib scikit-learn dtw-python statsmodels
+pip3 install numpy scipy matplotlib scikit-learn dtw statsmodels
 ```
 4. Run DREAMIT (change the thread count based on your machine)
 ```bash
